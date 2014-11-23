@@ -12,7 +12,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## method to store the original matrix
 	set <- function(n) {
-			x <<- m
+			x <<- n
 			inverse_cache <<- NULL
 		}
 
@@ -30,17 +30,19 @@ makeCacheMatrix <- function(x = matrix()) {
 
 }	
   
+## This function will search the cache for an inverse of the matrix "x"
+## if the function is found in the cache, then this function will return the vaules stored in the cache
+## otherwise, the inverse will be calculated.
 
-## metodo prova:
+cacheSolve <- function(x, ...) {
+
+	
+}
+
+
+
+## sample test:
 ## > x <- matrix(runif(16,0,100), nrow = 4, ncol= 4)
 ## > test = makeCacheMatrix(x)
 ## > test$get()
 ## > x
-
-## This function will search the cache for an inverse of the matrix "x"
-## if the function is found in the cache, then this function will return the vaules stored in the cache
-## otherwise, the cache will be calculated.
-
-cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
-}
